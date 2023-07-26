@@ -1,7 +1,7 @@
 let todoList = JSON.parse(localStorage.getItem("todoList"));
 
 if (todoList === null) {
-  const todoList = [];
+  const todoList = [{}];
 }
 
 
