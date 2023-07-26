@@ -1,0 +1,248 @@
+body{
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(
+  45deg,
+  hsl(289deg 100% 20%) 0%,
+  hsl(288deg 100% 19%) 5%,
+  hsl(287deg 100% 19%) 10%,
+  hsl(286deg 100% 18%) 15%,
+  hsl(285deg 100% 17%) 20%,
+  hsl(285deg 100% 17%) 25%,
+  hsl(284deg 100% 16%) 30%,
+  hsl(283deg 100% 15%) 35%,
+  hsl(282deg 100% 15%) 41%,
+  hsl(281deg 100% 14%) 46%,
+  hsl(280deg 100% 13%) 51%,
+  hsl(279deg 100% 13%) 56%,
+  hsl(284deg 100% 13%) 61%,
+  hsl(289deg 100% 14%) 66%,
+  hsl(294deg 100% 14%) 71%,
+  hsl(299deg 100% 14%) 75%,
+  hsl(304deg 100% 15%) 79%,
+  hsl(309deg 100% 15%) 84%,
+  hsl(313deg 100% 16%) 88%,
+  hsl(318deg 100% 16%) 91%,
+  hsl(323deg 100% 17%) 95%,
+  hsl(328deg 100% 17%) 98%,
+  hsl(333deg 100% 18%) 100%
+);
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  height: 100vh;
+  align-items: baseline;
+  justify-content: center;
+  box-sizing: border-box;
+  
+}
+
+.container {
+  background-color: rgb(255, 255, 255, 0.9);
+  padding: 1.5rem 5rem 5rem;
+  margin-top: 5rem;
+
+  border: none;
+  border-radius: 16px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+
+}
+
+H2 {
+  color: rgb(71, 22, 118);
+  font-size: 3rem;
+}
+
+/* INPUT  */
+.todo-input {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  margin-bottom: 2rem;
+
+}
+
+input {
+  padding: 12px;
+
+  border: none;
+  box-sizing: border-box;
+  background-color:white;
+  border-radius: 10px;
+
+  width: 100%;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+}
+
+input:hover {
+  background-color: rgba(255, 255, 255, 0.7); 
+  transition: 0.3s;
+
+}
+
+.name-input {
+  padding: 16px;
+  padding-left: 24px;
+
+  box-shadow: 0px 10px 12px rgba(192, 192, 192, 0.5);
+}
+
+.date-input { 
+  padding: 16px;
+  width: 100%;
+
+  box-shadow: 0px 10px 12px rgba(192, 192, 192, 0.5);
+}
+
+
+button {
+  padding: 16px 40px;
+  border: none;
+  background-color: rgb(255, 183, 0);
+  border-radius: 10px;
+  color: white;
+
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  
+  cursor: pointer;
+
+  box-shadow: 0px 10px 12px rgba(192, 192, 192, 0.5);
+}
+
+input:focus, form textarea:focus {
+  outline: none;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  background-color: rgba(109, 29, 104, 0.154);
+}
+
+button:hover {
+  background-color: rgba(109, 29, 104, 0.762);
+  transition: 0.5s;
+}
+
+.delete-button {
+  padding: 15px 30px;
+  height: 60px;
+}
+.delete-button:hover {
+ background-color: rgb(255, 49, 49);
+ transition: 0.4s;
+}
+
+/* END OF INPUT */
+
+/* TODO STYLES */
+
+p {
+  font-size: 24px;
+  color: rgb(71, 22, 118);
+  margin: 12px 0;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.task-name {
+  padding-left: 1.5rem;
+}
+
+.task-date {
+  font-size: 20px;
+  padding-left: 1rem;
+}
+
+.copyright {
+  position: fixed;
+  font-size: 16px;
+  right: 12px;
+  bottom: 1px;
+  margin-bottom: -2px;
+  
+  color: rgba(255, 255, 255, 0.15);
+  font-size: 12px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+
+  .todo-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 2rem;  
+  }
+
+
+  .container {
+    background-color: rgb(255, 255, 255, 0.9);
+    padding: 1rem 3rem 3rem;
+    margin-top: 3rem;
+  
+    border: none;
+    border-radius: 16px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+  }
+  
+  H2 {
+    color: rgb(71, 22, 118);
+    font-size: 2.5rem; 
+  }
+
+  p {
+    font-size: 20px;
+    margin: 2px;
+    color: rgb(71, 22, 118);
+    padding: 0;
+    text-align: center;
+  }
+  
+  .task {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+
+    padding: 0;
+    margin: 0;
+  }
+  .task-name {
+    padding-left: 0;
+    font-size: 30px;
+  }
+
+  .delete-button {
+    height: 60px;
+    width: 50%;
+    text-align: center;
+    align-self: center;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  .copyright {
+    position: fixed;
+    right: 12px;
+    bottom: 1px;
+    margin-bottom: -2px;
+    
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 10px;
+  }
+
+}
