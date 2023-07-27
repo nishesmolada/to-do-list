@@ -86,7 +86,6 @@ input {
 input:hover {
   background-color: rgba(255, 255, 255, 0.7); 
   transition: 0.3s;
-
 }
 
 .name-input {
@@ -99,9 +98,11 @@ input:hover {
 .date-input { 
   padding: 16px;
   width: 100%;
+  padding-left: 24px;
 
   box-shadow: 0px 10px 12px rgba(192, 192, 192, 0.5);
 }
+
 
 
 button {
@@ -157,9 +158,6 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.task-name {
-  padding-left: 1.5rem;
-}
 
 .task-date {
   font-size: 20px;
@@ -176,7 +174,6 @@ p {
   color: rgba(255, 255, 255, 0.15);
   font-size: 12px;
 }
-
 
 /* MEDIA QUERIES */
 
@@ -198,6 +195,14 @@ p {
     justify-content: space-between;
     gap: 8px;
     margin-bottom: 2rem;  
+  }
+
+  .task-name {
+    padding-left: 0;
+  }
+
+  input {
+    padding: 0;
   }
 
 
