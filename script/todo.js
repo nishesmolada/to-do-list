@@ -1,5 +1,9 @@
 const todoList = JSON.parse(localStorage.getItem("todoList"))
 
+if (todoList === undefined) {
+  todoList = [];
+}
+
 renderTodoList();
 
 function renderTodoList() {
