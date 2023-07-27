@@ -26,7 +26,6 @@ function renderTodoList() {
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
 }
   localStorage.setItem("todoList", JSON.stringify(todoList));
-}
 
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
