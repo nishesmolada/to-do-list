@@ -1,7 +1,9 @@
-const todoList = [
-  { name: "sample1", dueDate: "aaaaa" },
-  { name: "sample2", dueDate: "eeeee" },
-];
+let todoList = JSON.parse(localStorage.getItem("todoList"));
+
+if (todoList === null) {
+  let todoList = [];
+}
+
 
 renderTodoList();
 
@@ -23,7 +25,8 @@ function renderTodoList() {
   });
   document.querySelector(".js-todo-list").innerHTML = todoListHTML;
 }
-
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+}
 
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
@@ -44,3 +47,4 @@ function addTodo() {
 
   renderTodoList();
 }
+ 
