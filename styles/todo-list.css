@@ -32,6 +32,7 @@ body{
 
   display: flex;
   height: 100vh;
+  width: 100%;
   align-items: baseline;
   justify-content: center;
   box-sizing: border-box;
@@ -39,6 +40,8 @@ body{
 }
 
 .container {
+  position: absolute;
+
   background-color: rgb(255, 255, 255, 0.9);
   padding: 1.5rem 5rem 5rem;
   margin-top: 5rem;
@@ -48,7 +51,6 @@ body{
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
 
   width: 40%;
-
 }
 
 H2 {
@@ -178,6 +180,15 @@ p {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1200px) {
+  .container {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+    width: 50%;
+    }
+} 
+
 @media screen and (max-width: 800px) {
 
   .todo-input {
@@ -249,4 +260,38 @@ p {
     font-size: 10px;
   }
 
+}
+
+
+/* bubbles */
+.bubbles {
+  position: fixed;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #4fc3dc;
+  opacity: 0.5;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(120s / var(--i))
+}
+
+.bubbles span:nth-child(even) {
+  background-color: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0%{
+    transform: translateY(100vh) scale(0);
+  }
+  100%{
+    transform: translateY(-10vh) scale(1);
+  }
 }
